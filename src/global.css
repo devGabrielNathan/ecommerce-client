@@ -1,0 +1,109 @@
+:root {
+    /* background-colors and :hover text-colors*/
+    --primary-color: #0D1821;
+    --secondary-color: #344966;
+    --background-color: #F0F4EF;
+
+    /* :hover -> background*/
+    --primary-hover-color: #ffffff;
+
+    /* text */
+    --text-color: #F0F4EF;
+
+    /* others */
+    --border-radius: 8px;
+    --shadow-light: 0 2px 12px rgba(0,0,0,0.08);
+    --shadow-medium: 0 4px 20px rgba(0,0,0,0.12);
+    --transition-fast: 0.2s ease-out;
+    --transition-medium: 0.3s ease-out;
+    --scale-small: scale(0.95);
+    --scale-medium: scale(1.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    background-color: var(--background-color);
+    padding-top: 5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.btn-primary {
+    padding: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-medium);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover-color);
+    color: var(--secondary-color);
+}
+
+.btn-secondary {
+    padding: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-medium);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-hover-color);
+    color: var(--secondary-color);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+#load-more-button, #back-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
