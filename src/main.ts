@@ -6,7 +6,7 @@ import { renderLogin } from "./components/login";
 import { renderRegister } from "./components/register";
 import { page } from './components/section/product';
 import './global.css';
-import {renderProfile} from "./components/profile";
+// import {renderProfile} from "./components/profile";
 
 function getAvailablePages(): number {
     // Pega o valor calculado dinamicamente em renderProductList
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async (): Promise<void> => {
     const isProductPage: boolean = url.startsWith('/products');
     const isLoginPage: boolean = url === '/login';
     const isRegisterPage: boolean = url === '/register';
-    const isProfilePage: boolean = url === '/profile';
+    // const isProfilePage: boolean = url === '/profile';
     // Definindo a aparição de componentes em determinadas páginas
     const containsBanner: boolean = isHomePage;
 
@@ -104,10 +104,10 @@ document.addEventListener('DOMContentLoaded', async (): Promise<void> => {
         section.appendChild(register);
     }
 
-    if (isProfilePage) {
-        const profile  = renderProfile();
-        section.appendChild(profile);
-    }
+    // if (isProfilePage) {
+    //     const profile  = renderProfile();
+    //     section.appendChild(profile);
+    // }
 
     if (containsBanner) {
         const banner: HTMLElement = renderBanner();
